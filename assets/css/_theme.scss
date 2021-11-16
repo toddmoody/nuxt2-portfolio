@@ -1,0 +1,66 @@
+.light__theme {
+  .section__projects {
+    .projects__grid {
+      .project__wrapper {
+        .project__inner {
+          background-color: var(--lightest-navy);
+          .project__title {
+            color: var(--lightest-slate);
+          }
+          .project__snippet {
+              p {
+                color: var(--lightest-slate);
+              }
+          }
+        //   header {
+        //     .project__top {
+        //       .project__folder {
+        //         color: var(--accent);
+        //       }
+        //       .project__link {
+        //         a {
+        //           color: var(--lightest-slate);
+        //           svg {
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        footer {
+            .project__stack {
+                li {
+                    color: var(--lightest-slate); 
+                }
+            }
+        }
+        }
+      }
+    }
+  }
+}
+
+.dark__theme {
+  .section__projects {
+    .projects__grid {
+      .project__wrapper {
+        .project__inner {
+          background-color: var(--light-navy);
+        //   header {
+        //     .project__top {
+        //       .project__folder {
+        //         color: var(--accent);
+        //       }
+        //       .project__link {
+        //         a {
+        //           color: var(--slate);
+        //           svg {
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        }
+      }
+    }
+  }
+}

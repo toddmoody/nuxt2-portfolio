@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap");
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+h4 {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.dark__theme {
+  h1 {
+    color: var(--lightest-slate);
+  }
+}
+
+.light__theme {
+  h1 {
+    color: var(--dark-slate);
+  }
+}
+
+h1 {
+  font-size: 2.45rem;
+  &.text--xl {
+    font-size: 3.25rem;
+  }
+  &.text--slate {
+    color: var(--slate);
+  }
+}
+
+h2 {
+  color: var(--lightest-slate);
+  font-size: 1.95rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  color: var(--slate);
+  font-size: 1.75rem;
+  margin-bottom: 0.55rem;
+  &.text--sm {
+    font-size: 1.45rem;
+  }
+}
+
+h4 {
+  color: var(--accent);
+  font-size: 1.45rem;
+  margin-bottom: 0.55rem;
+  &.text--slate {
+    color: var(--slate);
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.55rem;
+}
+
+p {
+  color: var(--slate);
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+  &.font--plex {
+    font-family: "IBM Plex Mono", monospace;
+  }
+  &.text--sm {
+    font-size: 0.95rem;
+  }
+}
+
+a {
+  color: var(--accent);
+  font-size: 1.15rem;
+  &.font--plex {
+    font-family: "IBM Plex Mono", monospace;
+  }
+}
+
+p,
+a, 
+span {
+  font-family: "Nunito Sans", sans-serif;
+  &.font--plex {
+    font-family: "IBM Plex Mono", monospace;
+  }
+}
+
+.text--statement {
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+ul {
+  list-style: inherit;
+  margin-left: 10px;
+  li {
+    &::marker {
+      color: var(--slate);
+    }
+  }
+}
