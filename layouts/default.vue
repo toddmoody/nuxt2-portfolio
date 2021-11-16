@@ -37,7 +37,7 @@
               class="mobile__menu__hamburger"
             >
               <div class="mobile__menu__hamburger__box">
-                <div class="mobile__menu__hamburger__box__inner"></div>
+                <div   :class="mobileMenu ? 'active' : 'inactive'" class="mobile__menu__hamburger__box__inner"></div>
               </div>
             </button>
             <aside
@@ -300,9 +300,6 @@ export default {
     ...mapActions({
       toggleThemeAction: 'toggleThemeAction',
     }),
-    toggleMobileMenu() {
-      this.mobileMenu = !this.mobileMenu
-    },
     toggleTheme() {
       this.toggleThemeAction()
     },

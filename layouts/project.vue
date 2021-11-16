@@ -13,7 +13,7 @@
               <nuxt-link class="font--plex" to="/">Home</nuxt-link>
             </li>
           </ol>
-          <!-- <div style="transition-delay: 400ms">
+          <div>
             <a
               class="btn__resume font--plex"
               href="/resume.pdf"
@@ -21,33 +21,45 @@
               rel="noopener noreferrer"
               >Resume</a
             >
-          </div> -->
+          </div>
         </div>
-        <!-- <div class="menu__StyledMenu-sdn9y6-0 dAwNpJ fade-enter-done">
+        <div class="mobile__menu__wrapper">
           <div>
             <button
+              @click="mobileMenu = !mobileMenu"
               aria-label="Menu"
-              class="menu__StyledHamburgerButton-sdn9y6-1 eCxtrN"
+              class="mobile__menu__hamburger"
             >
-              <div class="ham-box"><div class="ham-box-inner"></div></div>
+              <div class="mobile__menu__hamburger__box">
+                <div
+                  :class="mobileMenu ? 'active' : 'inactive'"
+                  class="mobile__menu__hamburger__box__inner"
+                ></div>
+              </div>
             </button>
             <aside
+              :class="mobileMenu ? 'active' : 'inactive'"
               aria-hidden="true"
               tabindex="-1"
-              class="menu__StyledSidebar-sdn9y6-2 dKogfI"
             >
               <nav>
                 <ol>
-                  <li><a href="/#about">About</a></li>
-                  <li><a href="/#jobs">Experience</a></li>
-                  <li><a href="/#projects">Work</a></li>
-                  <li><a href="/#contact">Contact</a></li>
+                  <li>
+                    <nuxt-link class="font--plex" to="/">Home</nuxt-link>
+                  </li>
                 </ol>
-                <a href="/resume.pdf" class="resume-link">Resume</a>
+                <a
+                  @click="mobileMenu = false"
+                  class="btn__resume font--plex"
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Resume</a
+                >
               </nav>
             </aside>
           </div>
-        </div> -->
+        </div>
       </nav>
     </header>
     <div orientation="left" class="side__element left">
@@ -271,6 +283,7 @@ import * as animationData from '../assets/lottie/developer.json'
 export default {
   data() {
     return {
+      mobileMenu: false,
       anim: null, // for saving the reference to the animation
       lottieOptions: { animationData: animationData.default },
     }
