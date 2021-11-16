@@ -55,7 +55,7 @@
             font-size: 0.95rem;
             text-decoration: none;
             padding: 10px;
-            transition: $transition;
+            transition: var(--transition);
             &:hover {
               color: var(--accent);
             }
@@ -275,7 +275,7 @@
             font-size: 0.95rem;
             text-decoration: none;
             padding: 10px;
-            transition: $transition;
+            transition: var(--transition);
             &:hover {
               color: var(--accent);
             }

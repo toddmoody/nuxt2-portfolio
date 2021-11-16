@@ -104,7 +104,7 @@ section {
           padding: 2rem 1.75rem;
           border-radius: 7px;
           box-shadow: 0 10px 30px -15px var(--navy-shadow);
-          transition: $transition;
+          transition: var(--transition);
           header {
             width: 100%;
             .project__top {

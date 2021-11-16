@@ -49,7 +49,7 @@ main {
   margin-left: 10px;
   border-radius: 7px;
   background-color: transparent;
-  transition: $transition;
+  transition: var(--transition);
   &:hover {
     background-color: var(--accent-tint);
   }
@@ -85,7 +85,7 @@ main {
             text-decoration-skip-ink: auto;
             color: inherit;
             position: relative;
-            transition: $transition;
+            transition: var(--transition);
             svg {
               width: 20px;
               height: 20px;
@@ -132,7 +132,7 @@ main {
             text-decoration-skip-ink: auto;
             color: inherit;
             position: relative;
-            transition: $transition;
+            transition: var(--transition);
             svg {
               width: 20px;
               height: 20px;
