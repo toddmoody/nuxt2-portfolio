@@ -1,6 +1,9 @@
 <template>
   <div :class="theme ? 'dark__theme' : 'light__theme'" class="default__wrapper">
-    <header class="default__header">
+    <header
+      :class="!showNavbar ? 'default__header--hidden' : 'flex'"
+      class="default__header"
+    >
       <nav>
         <div class="nav__logo__wrapper" tabindex="-1">
           <nuxt-link to="/" aria-label="home"
@@ -10,13 +13,17 @@
         <div class="nav__menu__wrapper">
           <ol>
             <li>
-              <a class="font--plex" href="/#about">About</a>
+              <a class="font--plex" href="/#about" aria-label="home">About</a>
             </li>
             <li>
-              <a class="font--plex" href="/#projects">Projects</a>
+              <a class="font--plex" href="/#projects" aria-label="projects"
+                >Projects</a
+              >
             </li>
             <li>
-              <a class="font--plex" href="/#contact">Contact</a>
+              <a class="font--plex" href="/#contact" aria-label="contact"
+                >Contact</a
+              >
             </li>
           </ol>
           <div>
@@ -37,7 +44,10 @@
               class="mobile__menu__hamburger"
             >
               <div class="mobile__menu__hamburger__box">
-                <div   :class="mobileMenu ? 'active' : 'inactive'" class="mobile__menu__hamburger__box__inner"></div>
+                <div
+                  :class="mobileMenu ? 'active' : 'inactive'"
+                  class="mobile__menu__hamburger__box__inner"
+                ></div>
               </div>
             </button>
             <aside
@@ -47,9 +57,33 @@
             >
               <nav>
                 <ol>
-                  <li><a @click="mobileMenu = false" class="font--plex" href="/#about">About</a></li>
-                  <li><a @click="mobileMenu = false" class="font--plex" href="/#projects">Projects</a></li>
-                  <li><a @click="mobileMenu = false" class="font--plex" href="/#contact">Contact</a></li>
+                  <li>
+                    <a
+                      @click="mobileMenu = false"
+                      class="font--plex"
+                      href="/#about"
+                      aria-label="about"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      @click="mobileMenu = false"
+                      class="font--plex"
+                      href="/#projects"
+                      aria-label="projects"
+                      >Projects</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      @click="mobileMenu = false"
+                      class="font--plex"
+                      href="/#contact"
+                      aria-label="contact"
+                      >Contact</a
+                    >
+                  </li>
                 </ol>
                 <a
                   @click="mobileMenu = false"
@@ -286,7 +320,9 @@ import * as animationData from '../assets/lottie/developer.json'
 export default {
   data() {
     return {
+      showNavbar: true,
       mobileMenu: false,
+      lastScrollPosition: 0,
       anim: null, // for saving the reference to the animation
       lottieOptions: { animationData: animationData.default },
     }
@@ -306,6 +342,25 @@ export default {
     handleAnimation: function (anim) {
       this.anim = anim
     },
+    onScroll() {
+      // Get the current scroll position
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Here we determine whether we need to show or hide the navbar
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      // Set the current scroll position as the last scroll position
+      this.lastScrollPosition = currentScrollPosition
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
   },
 }
 </script>

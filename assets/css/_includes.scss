@@ -1,5 +1,5 @@
-.default__header, .project__header {
-  display: flex;
+.default__header,
+.project__header {
   -moz-box-pack: justify;
   justify-content: space-between;
   align-items: center;
@@ -8,11 +8,16 @@
   z-index: 11;
   padding: 0px 50px;
   width: 100%;
-  height: 100px;
+  height: var(--nav-scroll-height);
   background-color: var(--nav);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
+  transform: translateY(0px);
+  transition: var(--transition);
+  &.default__header--hidden, .project__header--hidden {
+    transform: translateY(calc(var(--nav-scroll-height) * -1));
+  }
   nav {
     display: flex;
     -moz-box-pack: justify;
