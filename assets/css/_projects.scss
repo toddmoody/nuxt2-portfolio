@@ -45,6 +45,8 @@
         }
       }
       svg {
+        height: 28px;
+        width: 28px;
         color: var(--slate);
         &:hover {
           color: var(--accent);
