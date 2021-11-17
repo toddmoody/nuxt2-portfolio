@@ -51,6 +51,7 @@ The architecture is a multi-tenant SaaS application with a Vue.js front-end and 
 
 For Tu Kaha specifically, key requirements included a modern UI/UX for students with a focus on engagement and interactivity (given the Tu Kaha user base is predominately children). We also needed to provide full content and user management capabilities to admin across various roles across both the public facing and authenticated views.
 
+<a href="#long-description">Stack, approach & more</a>
 </div>
 </div>
 </div>
@@ -79,7 +80,6 @@ For Tu Kaha specifically, key requirements included a modern UI/UX for students 
 </div>
 </div>
 <div class="col-span-1 flex justify-center">
-</div>
 </div>
 </div>
 </section>
@@ -124,6 +124,16 @@ A key challenge in this project was handling an ‘enforced lesson flow’ as we
 - Lottie animations and CSS transitions utilised to deliver a more fun and engaging virtual classroom experience.  
 - End of lesson, section and course modals to encourage the user to keep moving through the course to completion.
 
+</div>
+</div>
+<div class="flex flex-wrap -mx-5 overflow-hidden">
+<div class="project__long__description__title">
+
+### Project link
+
+</div>
+<div class="project__long__description__content">
+<a href="https://tu-kaha.tzu.co.nz/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 </div>
 </div>
 </div>

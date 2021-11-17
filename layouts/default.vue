@@ -29,7 +29,7 @@
           <div>
             <a
               class="btn__resume font--plex"
-              href="/resume.pdf"
+              href="/resume_todd_moody.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Resume</a
@@ -88,7 +88,7 @@
                 <a
                   @click="mobileMenu = false"
                   class="btn__resume font--plex"
-                  href="/resume.pdf"
+                  href="/resume_todd_moody.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Resume</a
@@ -323,7 +323,7 @@ export default {
       showNavbar: true,
       mobileMenu: false,
       lastScrollPosition: 0,
-      anim: null, // for saving the reference to the animation
+      anim: null,
       lottieOptions: { animationData: animationData.default },
     }
   },
@@ -343,16 +343,15 @@ export default {
       this.anim = anim
     },
     onScroll() {
-      // Get the current scroll position
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
-      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
       if (currentScrollPosition < 0) {
         return
       }
-      // Here we determine whether we need to show or hide the navbar
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 35) {
+        return
+      }
       this.showNavbar = currentScrollPosition < this.lastScrollPosition
-      // Set the current scroll position as the last scroll position
       this.lastScrollPosition = currentScrollPosition
     },
   },

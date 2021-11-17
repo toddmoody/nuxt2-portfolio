@@ -51,6 +51,7 @@ The virtual tour needed to be as close to a real experience as possible in order
 
 From an investor perspective the UI/UX needed to be as clean & simple as possible with most core content including the Virtual Tour requiring authentication. Admins on the client side have full content management capability incl. creating multiple tours, management of tour content (Videos, notifications, supporting content etc), inviting users and moderation of share functionality.
 
+<a href="#long-description">Stack, approach & more</a>
 </div>
 </div>
 </div>
@@ -79,7 +80,6 @@ From an investor perspective the UI/UX needed to be as clean & simple as possibl
 </div>
 </div>
 <div class="col-span-1 flex justify-center">
-</div>
 </div>
 </div>
 </section>
@@ -124,6 +124,16 @@ From the onset Video was going to be a core part of the application. Previously,
 - Share functionality allowing the ability for users to "Invite" their contacts to a Virtual Tour.
 - Hyvor forum integration providing the ability for members to participate in group discussion.
 
+</div>
+</div>
+<div class="flex flex-wrap -mx-5 overflow-hidden">
+<div class="project__long__description__title">
+
+### Project link
+
+</div>
+<div class="project__long__description__content">
+<a href="https://new-forests.tzu.app/login" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 </div>
 </div>
 </div>

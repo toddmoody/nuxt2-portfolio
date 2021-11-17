@@ -15,7 +15,10 @@
   user-select: auto !important;
   transform: translateY(0px);
   transition: var(--transition);
-  &.default__header--hidden, .project__header--hidden {
+  &.default__header--hidden {
+    transform: translateY(calc(var(--nav-scroll-height) * -1));
+  }
+  &.project__header--hidden {
     transform: translateY(calc(var(--nav-scroll-height) * -1));
   }
   nav {
