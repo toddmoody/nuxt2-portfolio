@@ -99,6 +99,10 @@ section {
           padding: 2rem 1.75rem;
           border-radius: 7px;
           transition: var(--transition);
+          cursor: inherit;
+          &.project__inner--production {
+            cursor: pointer;
+          }
           header {
             width: 100%;
             .project__top {

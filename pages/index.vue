@@ -60,7 +60,7 @@
         >
           <div
             @click="project.production ? projectRoute(project.slug) : ''"
-            :class="project.production ? 'cursor-pointer' : ''"
+            :class="project.production ? 'project__inner--production' : ''"
             class="project__inner"
           >
             <header>

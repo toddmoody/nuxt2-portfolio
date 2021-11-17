@@ -5,14 +5,16 @@
         .project__inner {
           background-color: var(--feature-bg);
           box-shadow: 0 10px 30px -15px var(--feature-bg);
-          &:hover {
-            background-color: inherit;
-          }
           footer {
             .project__stack {
               li {
                 color: var(--slate);
               }
+            }
+          }
+          &.project__inner--production {
+            &:hover {
+              background-color: inherit;
             }
           }
         }
@@ -36,8 +38,10 @@
         .project__inner {
           background-color: var(--feature-bg);
           box-shadow: 0 10px 30px -15px var(--navy-shadow);
-          &:hover {
-            background-color: inherit;
+          &.project__inner--production {
+            &:hover {
+              background-color: inherit;
+            }
           }
         }
       }
