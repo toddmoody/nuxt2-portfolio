@@ -327,7 +327,7 @@ export const projects = [
     id: 4,
     production: true,
     brand: 'McLeavey Gallery',
-    project: 'SilverStripe CMS',
+    project: 'SilverStripe CMS & UX',
     snippet:
       'McLeavey Gallery engaged with me to resolve a range of issues with their existing SilverStripe website. We kicked off a project to improve the overall UX from the design & layout, page speed (incl. AWS hosting migration) and lead facilitation.',
     description:

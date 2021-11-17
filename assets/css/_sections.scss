@@ -59,7 +59,7 @@ section {
           &::after {
             content: "";
             height: 1px;
-            background-color: var(--light-navy);
+            background-color: var(--skills-pinline);
             width: 100%;
             z-index: 1;
             position: absolute;
@@ -87,11 +87,6 @@ section {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       }
       .project__wrapper {
-        position: relative;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-        visibility: visible;
-        opacity: 1;
-        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
         .project__inner {
           display: flex;
           -webkit-box-pack: justify;
@@ -103,7 +98,6 @@ section {
           height: 100%;
           padding: 2rem 1.75rem;
           border-radius: 7px;
-          box-shadow: 0 10px 30px -15px var(--navy-shadow);
           transition: var(--transition);
           header {
             width: 100%;

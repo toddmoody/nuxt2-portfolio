@@ -3,38 +3,28 @@
     .projects__grid {
       .project__wrapper {
         .project__inner {
-          background-color: var(--lightest-navy);
-          .project__title {
-            color: var(--lightest-slate);
+          background-color: var(--feature-bg);
+          box-shadow: 0 10px 30px -15px var(--feature-bg);
+          &:hover {
+            background-color: inherit;
           }
-          .project__snippet {
-              p {
-                color: var(--lightest-slate);
-              }
-          }
-        //   header {
-        //     .project__top {
-        //       .project__folder {
-        //         color: var(--accent);
-        //       }
-        //       .project__link {
-        //         a {
-        //           color: var(--lightest-slate);
-        //           svg {
-        //           }
-        //         }
-        //       }
-        //     }
-        //   }
-        footer {
+          footer {
             .project__stack {
-                li {
-                    color: var(--lightest-slate); 
-                }
+              li {
+                color: var(--slate);
+              }
             }
-        }
+          }
         }
       }
+    }
+  }
+  .project {
+    .project__mobile__grid {
+      background-color: var(--feature-bg);
+    }
+    .project__hero__desktop {
+      background-color: var(--feature-bg);
     }
   }
 }
@@ -44,23 +34,21 @@
     .projects__grid {
       .project__wrapper {
         .project__inner {
-          background-color: var(--light-navy);
-        //   header {
-        //     .project__top {
-        //       .project__folder {
-        //         color: var(--accent);
-        //       }
-        //       .project__link {
-        //         a {
-        //           color: var(--slate);
-        //           svg {
-        //           }
-        //         }
-        //       }
-        //     }
-        //   }
+          background-color: var(--feature-bg);
+          box-shadow: 0 10px 30px -15px var(--navy-shadow);
+          &:hover {
+            background-color: inherit;
+          }
         }
       }
+    }
+  }
+  .project {
+    .project__mobile__grid {
+      background-color: var(--light-navy);
+    }
+    .project__hero__desktop {
+      background-color: var(--light-navy);
     }
   }
 }

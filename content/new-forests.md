@@ -142,7 +142,7 @@ From the onset Video was going to be a core part of the application. Previously,
 <section class="project__hero__desktop">
 <div class="wrapper">
 <global-image
-  src="nf-tour-desktop.jpg"
+  src="nf-tour-desktop.png"
   alt="New Forests - video"
 ></global-image>
 </div>
