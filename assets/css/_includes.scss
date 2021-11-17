@@ -70,7 +70,7 @@
             &::before {
               content: '0' counter(item) '.';
               margin-right: 5px;
-              // color: var(--accent);
+              color: var(--accent);
               text-align: right;
             }
           }
