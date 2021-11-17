@@ -42,6 +42,7 @@ main {
 }
 
 .btn__resume {
+  color: var(--accent);
   font-size: 0.95rem;
   text-decoration: none;
   border: 1px solid var(--accent);
@@ -51,7 +52,9 @@ main {
   background-color: transparent;
   transition: var(--transition);
   &:hover {
+    color: var(--white);
     background-color: var(--accent-tint);
+    border: 1px solid var(--accent-tint);
   }
 }
 

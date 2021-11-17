@@ -1,6 +1,9 @@
 <template>
   <div :class="theme ? 'dark__theme' : 'light__theme'" class="project__wrapper">
-    <header class="project__header">
+    <header
+      :class="!showNavbar ? 'project__header--hidden' : 'flex'"
+      class="project__header"
+    >
       <nav>
         <div class="nav__logo__wrapper" tabindex="-1">
           <nuxt-link to="/" aria-label="home"
@@ -16,7 +19,7 @@
           <div>
             <a
               class="btn__resume font--plex"
-              href="/resume.pdf"
+              href="/resume_todd_moody.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Resume</a
@@ -51,7 +54,7 @@
                 <a
                   @click="mobileMenu = false"
                   class="btn__resume font--plex"
-                  href="/resume.pdf"
+                  href="/resume_todd_moody.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Resume</a
@@ -283,7 +286,9 @@ import * as animationData from '../assets/lottie/developer.json'
 export default {
   data() {
     return {
+      showNavbar: true,
       mobileMenu: false,
+      lastScrollPosition: 0,
       anim: null, // for saving the reference to the animation
       lottieOptions: { animationData: animationData.default },
     }
@@ -303,6 +308,24 @@ export default {
     handleAnimation: function (anim) {
       this.anim = anim
     },
+    onScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 35) {
+        return
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
   },
 }
 </script>
