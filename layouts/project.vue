@@ -16,7 +16,7 @@
               <nuxt-link class="font--plex" to="/">Home</nuxt-link>
             </li>
           </ol>
-          <div>
+          <!-- <div>
             <a
               class="btn__resume font--plex"
               href="/resume_todd_moody.pdf"
@@ -24,7 +24,7 @@
               rel="noopener noreferrer"
               >Resume</a
             >
-          </div>
+          </div> -->
         </div>
         <div class="mobile__menu__wrapper">
           <div>

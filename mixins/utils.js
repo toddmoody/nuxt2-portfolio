@@ -35,41 +35,53 @@ export const skills = [
       },
       {
         id: 2,
-        title: 'Vue.js',
+        title: 'Vue.js (Options / Composition APIs)',
       },
       {
         id: 3,
-        title: 'Nuxt.js',
+        title: 'Pinia Store / Vuex',
       },
       {
         id: 4,
-        title: 'Vite',
+        title: 'Nuxt.js',
       },
       {
         id: 5,
-        title: 'SASS',
+        title: 'Liquid',
       },
       {
         id: 6,
-        title: 'Tailwind CSS / Tailwind UI',
+        title: 'Vite / Webpack / Rollup',
       },
       {
         id: 7,
-        title: 'Axios',
+        title: 'SASS',
       },
       {
         id: 8,
-        title: 'Lottie',
+        title: 'Tailwind CSS / Tailwind UI',
+      },
+      {
+        id: 9,
+        title: 'RESTful API / GraphQL',
+      },
+      {
+        id: 10,
+        title: 'Axios',
+      },
+      {
+        id: 11,
+        title: 'WebSocket API',
       },
     ],
   },
   {
     id: 3,
-    category: 'Back-End',
+    category: 'Back-End / CMS',
     tags: [
       {
         id: 1,
-        title: 'Node.js',
+        title: 'Shopify Plus',
       },
       {
         id: 2,
@@ -77,7 +89,7 @@ export const skills = [
       },
       {
         id: 3,
-        title: 'Shopify',
+        title: 'Node.js',
       },
       {
         id: 4,
@@ -89,10 +101,6 @@ export const skills = [
       },
       {
         id: 6,
-        title: 'RESTful API / GraphQL',
-      },
-      {
-        id: 7,
         title: 'Firebase',
       },
     ],
@@ -102,6 +110,64 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    production: true,
+    brand: 'Amalgamated Hardware Merchants',
+    project: 'Shopify+ Full Rebuild',
+    snippet:
+      'Amalgamated Hardware Merchants (AHM) is a leading B2B supplier of hardware, building materials and DIY products. We were engaged to rebuild their existing Magento store from the ground up in Shopify Plus.',
+    slug: 'amalgamated-hardware-merchants',
+    tags: [
+      {
+        id: 1,
+        title: 'Shopify Plus',
+      },
+      {
+        id: 2,
+        title: 'Vue.js (Composition API)',
+      },
+
+      {
+        id: 3,
+        title: 'Pinia Store',
+      },
+      {
+        id: 4,
+        title: 'RESTful API / Axios',
+      }
+    ],
+    skills: [
+      {
+        id: 1,
+        title: 'Vue.js',
+      },
+      {
+        id: 2,
+        title: 'Nuxt.js',
+      },
+      {
+        id: 3,
+        title: 'Vuex',
+      },
+      {
+        id: 4,
+        title: 'Video.js',
+      },
+      {
+        id: 5,
+        title: 'Google Maps API',
+      },
+      {
+        id: 6,
+        title: 'SCSS',
+      },
+      {
+        id: 7,
+        title: 'Tailwind UI',
+      },
+    ],
+  },
+  {
+    id: 2,
     production: true,
     slug: 'new-forests',
     brand: 'New Forests',
@@ -192,7 +258,7 @@ export const projects = [
     },
   },
   {
-    id: 2,
+    id: 3,
     production: true,
     brand: 'RFI Fusion',
     project: 'Request for informaton application (SaaS)',
@@ -262,7 +328,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     production: true,
     brand: 'Tu Kaha',
     project: 'Learning management system (LMS)',
@@ -324,7 +390,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     production: true,
     brand: 'McLeavey Gallery',
     project: 'SilverStripe CMS & UX',
@@ -414,7 +480,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     production: false,
     brand: 'Detail Connect',
     project: 'Google Maps / JavaScript API',
@@ -466,67 +532,5 @@ export const projects = [
         title: 'Tailwind UI',
       },
     ],
-  },
-  {
-    id: 6,
-    production: false,
-    brand: 'Covid-19',
-    project: 'NZ case tracker',
-    snippet:
-      'As a side-project, I thought it would be interesting (and relevant!) to build a Covid-19 case tracker and localise this to New Zealand. An interesting Vue.js project integrating with an external Covid-19 API. The app will display a range of case data and the ability to refine results by region.',
-    slug: 'covid-19',
-    tags: [
-      {
-        id: 1,
-        title: 'Vue.js 3.0',
-      },
-      {
-        id: 2,
-        title: 'SPA',
-      },
-
-      {
-        id: 3,
-        title: 'Vuex',
-      },
-      {
-        id: 4,
-        title: 'RESTful API / Axios',
-      },
-      {
-        id: 5,
-        title: 'Side project',
-      },
-    ],
-    skills: [
-      {
-        id: 1,
-        title: 'Vue.js',
-      },
-      {
-        id: 2,
-        title: 'Nuxt.js',
-      },
-      {
-        id: 3,
-        title: 'Vuex',
-      },
-      {
-        id: 4,
-        title: 'Video.js',
-      },
-      {
-        id: 5,
-        title: 'Google Maps API',
-      },
-      {
-        id: 6,
-        title: 'SCSS',
-      },
-      {
-        id: 7,
-        title: 'Tailwind UI',
-      },
-    ],
-  },
+  }
 ]

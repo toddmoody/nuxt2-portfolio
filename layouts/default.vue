@@ -26,7 +26,7 @@
               >
             </li>
           </ol>
-          <div>
+          <!-- <div>
             <a
               class="btn__resume font--plex"
               href="/resume_todd_moody.pdf"
@@ -34,7 +34,7 @@
               rel="noopener noreferrer"
               >Resume</a
             >
-          </div>
+          </div> -->
         </div>
         <div class="mobile__menu__wrapper">
           <div>
@@ -191,33 +191,6 @@
               ></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle></svg
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://codepen.io/toddmoody"
-            aria-label="Codepen"
-            target="_blank"
-            rel="noreferrer"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-codepen"
-            >
-              <title>CodePen</title>
-              <polygon
-                points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
-              ></polygon>
-              <line x1="12" y1="22" x2="12" y2="15.5"></line>
-              <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
-              <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
-              <line x1="12" y1="2" x2="12" y2="8.5"></line></svg
           ></a>
         </li>
         <li>
