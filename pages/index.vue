@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section__intro">
+    <section id="intro" class="section__intro">
       <div>
         <h4 class="text--statement">Hi, my name is</h4>
       </div>
@@ -10,24 +10,27 @@
       <div>
         <h1 class="text--xl text--slate">I'm a UI/UX Software Developer.</h1>
       </div>
-      <div class="content__fixed__sm">
+      <div class="content__fixed__md">
         <p>
-          I’m a freelance Software Developer with a creative, holistic, and
+          I’m a self-starting Software Developer with a creative, holistic, and
           results driven approach to projects. I love creating user experiences
-          on complex projects that appear minimalist and simple to the end-user.
+          on complex projects that appear minimalist and simple to the end user.
+          I work across the full development stack - in particular, I thrive on
+          the intricacies of Front-End development. I’m passionate about being
+          the conduit between the creative vision and technical implementation
+          of applications.
         </p>
       </div>
     </section>
-    <section id="about" class="section__about">
+    <section id="tech-stack" class="section__tech-stack">
       <div>
-        <h2 class="numbered__header">About</h2>
+        <h2 class="numbered__header">Tech Stack</h2>
       </div>
       <div class="content__fixed__md">
         <p>
-          I’m a full-stack developer specialising in Front-End development. I’m
-          passionate about being the conduit between the creative vision and
-          technical implementation of applications. I'm in the business of
-          making the complex appear simple.
+          Nothing is ever static in this industry and I enjoy learning new
+          languages, tools and frameworks - it’s part of what being is developer
+          is all about. Some of of my favourite tech stack right now is…
         </p>
       </div>
       <div class="skills__grid">
@@ -43,15 +46,6 @@
       <div>
         <h2 class="numbered__header">Projects</h2>
       </div>
-      <!-- <div class="content__fixed__md">
-        <p>
-          I write code across the full development stack - in particular, I
-          thrive on the intricacies of Front-End development. I’m passionate
-          about being the conduit between the creative vision and technical
-          implementation of applications. I'm in the business of making the
-          complex appear simple.
-        </p>
-      </div> -->
       <div class="projects__grid">
         <div
           v-for="project in projects"
@@ -154,8 +148,9 @@
       </div>
       <div class="content__fixed__md">
         <p>
-          I'm located in Tauranga, New Zealand and I'm always open to new and
-          exciting freelance projects. Please don't hesitate to get in touch by
+          Right now I’m fully committed to project work but it’s always great to
+          connect with like-minded people in the tech industry. Please don't
+          hesitate to get in touch by
           <a href="mailto:todd@moodsdigital.co.nz">dropping me an email</a> or
           calling <a href="tel:021570010">021 570 010</a>.
         </p>

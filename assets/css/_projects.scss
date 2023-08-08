@@ -3,6 +3,14 @@
     padding-top: 100px;
   }
   .project__intro {
+    ul {
+      margin-left: 20px;
+      li {
+        font-size: 1.15rem;
+        color: var(--slate);
+        margin-bottom: 0.65rem;
+      }
+    }
     .project__skills {
       @apply my-5 px-5 w-full overflow-hidden lg:w-1/3;
       ul {
@@ -38,6 +46,7 @@
     .project__long__description__content {
       @apply my-5 px-5 w-full overflow-hidden lg:w-2/3;
       ul {
+        margin-left: 20px;
         li {
           font-size: 1.15rem;
           color: var(--slate);
