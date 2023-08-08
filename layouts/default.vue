@@ -16,7 +16,7 @@
               <a class="font--plex" href="/#intro" aria-label="home">About</a>
             </li> -->
             <li>
-              <a class="font--plex" href="/#tech-stack" aria-label="home">Tech Stack</a>
+              <a class="font--plex" href="/#tech-stack" aria-label="tech-stack">Tech Stack</a>
             </li>
             <li>
               <a class="font--plex" href="/#projects" aria-label="projects"
@@ -64,9 +64,9 @@
                     <a
                       @click="mobileMenu = false"
                       class="font--plex"
-                      href="/#about"
-                      aria-label="about"
-                      >About</a
+                      href="/#tech-stack"
+                      aria-label="tech-stack"
+                      >Tech Stack</a
                     >
                   </li>
                   <li>
@@ -88,14 +88,14 @@
                     >
                   </li>
                 </ol>
-                <a
+                <!-- <a
                   @click="mobileMenu = false"
                   class="btn__resume font--plex"
                   href="/resume_todd_moody.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Resume</a
-                >
+                > -->
               </nav>
             </aside>
           </div>
