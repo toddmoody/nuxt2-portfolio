@@ -31,13 +31,12 @@
 - Liquid
 - Vue.js (Composition API)
 - Pinia Store
-- Wishlist API integration (integration with in-house application)
+- Wishlist API integration (RESTful API integration)
 - Wholesale pricing customisation 
-- B2B only visibility (elements disabled to public users)
-- Cart / Product Recommendations & Predictive Search Ajax API integrations
-- Product Search & Filter API integration for collections & filtering
+- B2B only visibility
+- Cart, Product Recommendations & Predictive Search Ajax integrations
+- Boost Product Search & Filter API integration 
 - Shopify CLI v3
-- RESTful API / Axios
 - SCSS
 - Tailwind CSS
 - Vite
@@ -51,11 +50,14 @@
 </div>
 <div class="project__description">
 
-New Forests are a global leader in providing sustainable forestry investment opportunities. Due to Covid-19 preventing on-site investor tours we were engaged to create a "Virtual Tour" application.
+Amalgamated Hardware Merchants (AHM) is a leading B2B supplier of hardware, building materials and DIY products with clients such as Bunnings Warehouse, and Mitre 10. We were engaged to rebuild their existing Magento store from the ground up in Shopify Plus.
 
-The virtual tour needed to be as close to a real experience as possible in order to give investors a feel for the environment, location & ultimately the long-term viability of the investment opportunity.
+There was no shortage of pain-points with the existing build that we needed to address, in particular:
 
-From an investor perspective the UI/UX needed to be as clean & simple as possible with most core content including the Virtual Tour requiring authentication. Admins on the client side have full content management capability incl. creating multiple tours, management of tour content (Videos, notifications, supporting content etc), inviting users and moderation of share functionality.
+- Design was outdated and UX was a huge known issue. 
+- Over time, B2B pricing requirements had grown to much more complex.
+- Users were finding the overall shopping experience to be time consuming and arduous (in particular for repeat orders) leading to decreasing conversion rates.
+- Due to a huge product library, searching and filtering products had become very difficult.
 
 <a href="#long-description">Stack, approach & more</a>
 </div>
@@ -100,22 +102,11 @@ From an investor perspective the UI/UX needed to be as clean & simple as possibl
 </div>
 <div class="project__long__description__content">
 
-We decided on Vue.js as the core front-end framework with the addition of Nuxt.js. Nuxt provides a number of very useful baked-in features and methods that compliment Vue really well. The primary feature that confirmed this was the correct approach for us was the Server Side Rendering (SSR) capability given the importance of SEO (albeit not an immediate requirement due to the lack of public facing content). The server-side of the application was developed in Laravel (integration to the Nova CMS) including exposing a number of RESTful endpoints to consumed by the font-end. From a front-end perspective, we needed to leverage the UI benefits of a modern JavaScript framework and Single Page Application but we also needed to deliver a highly SEO friendly solution over the longer-term.
+From early on in the design phase, it was clear that although the front-end would be clean and modular, that there would be various complex UI elements - many of which would have similar variations across the site. We also needed tooling that would allow us to integrate with various API’s in a performant and effective way. Utilising the Shopify storefront API was tempting however in this case, I decided that a hybrid approach of Liquid and Vue composition API would be the ideal combination as most of the more complicated requirements were based on the AHM’s custom data set-up. Our existing base theme repo had become a little outdated, in particular from a performance perspective. After much research, I decided to leverage from a [Vite based repo] (https://github.com/barrel/shopify-vite/tree/main/packages/vite-plugin-shopify) originally created by the [Barrel agency] (https://www.barrelny.com/shopify-plus-ecommerce-agency). The base theme was then customised for our needs including Vue 3 support for multiple mounting points, enabling us to to only load the specific component(s) needed for a particular page. Additionally, I decided to integrate Pinia for global store management. 
 
 </div>
 </div>
-<div class="flex flex-wrap -mx-5 overflow-hidden">
-<div class="project__long__description__title">
 
-### A challenge to overcome
-
-</div>
-<div class="project__long__description__content">
-
-From the onset Video was going to be a core part of the application. Previously, I had utilised the Vimeo API extensively however due to some fairly complex project requirements (custom bi-lingual subtitles & custom text overlays at predefined times) investigation into another player was required. It was challenging to find something JavaScript based, with the required feature set, that was also open source and had a decent level of developer documentation. Eventually, Video.js was adopted and works very seamlessly in the application.
-
-</div>
-</div>
 <div class="flex flex-wrap -mx-5 overflow-hidden">
 <div class="project__long__description__title">
 
@@ -124,11 +115,11 @@ From the onset Video was going to be a core part of the application. Previously,
 </div>
 <div class="project__long__description__content">
 
-- Video.js integration in order to provide a highly customisable media player incl. timed video notifications (configurable in the CMS) & custom multilingual captions
-- Video completion modals which are configurable in the CMS (i.e. next video in...).
-- Google Maps JavaScript API integration. This enables client side admins to display the location(s) of tour stops within the tour.
-- Share functionality allowing the ability for users to "Invite" their contacts to a Virtual Tour.
-- Hyvor forum integration providing the ability for members to participate in group discussion.
+- B2B only visibility. Although the client wanted the general public to be able the access the site, there is various critical B2B only functionality, in particular the pricing data. This was handled on the front-end by extracting the customers auth state (along with other key data as a customer object) and either using this across Liquid sections or passing the object into Vue as needed. From here, we were able to easily toggle the visibility of both Liquid and/or Vue elements as required.
+- Tiered pricing levels. The client had a standard Trade Price applicable to some clients but in addition to this many clients have special trade rates. The data for the trade pricing is pushed into Shopify from Netsuite and we recommend a Metafield object schema at the product level. The object essentially includes a UUID for any customers that have special pricing and the applicable trade price. On the PDP (and various other areas of the site where pricing is displayed) we are able to loop over the Metafield data and reveal the relevant price.
+- Global customer discounting. A further requirement on top of the trade pricing was the ability to apply global discounting on top of any applicable trade price. Again, a Metafield solution was utilised here with integer data (relating to the applicable discount) being pushed into Shopify via Netsuite.
+- Multiple Wishlist integration. The ability to save multiple Wishlist’s was a core feature of the site and would be also facilitate some of the bulk ATC features (more below). Our back-end development team created a Shopify app for this purpose and exposed a number of API endpoints to facilitate CRUD actions which were consumed on the front-end. Key features included, the the ability to name lists (with the default being a sequentially numbered name i.e. Wishlist #1), add single and multiple products to a list and remove items from the list. 
+- Bulk add to cart. Another key feature was the bulk ATC functionality that was applied in various variations across the site. In particular, the ability to bulk add products to the cart using a client generated SKU number (Shopfiy Predictive Search API was also utilised here), the ability to bulk add an entire previous order to the cart and the ability to add the entire Wishlist contents to the cart (and the related handling of low stock / out of stock products).
 
 </div>
 </div>
