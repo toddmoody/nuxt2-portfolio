@@ -51,14 +51,14 @@
                     <nuxt-link class="font--plex" to="/">Home</nuxt-link>
                   </li>
                 </ol>
-                <a
+                <!-- <a
                   @click="mobileMenu = false"
                   class="btn__resume font--plex"
                   href="/resume_todd_moody.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Resume</a
-                >
+                > -->
               </nav>
             </aside>
           </div>
