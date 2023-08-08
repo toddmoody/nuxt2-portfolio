@@ -5,7 +5,7 @@
 <div class="pt-8">
 <h1>
 
-# Amalgamated Hardware Merchants
+# Amalgamated Hardware Merchants (AHM)
 
 </h1>
 </div>
@@ -44,7 +44,7 @@
 <div class="mt-6">
 <h4>Status</h4>
 <div class="flex items-center">
-<p>Complete (Go-Live scheduled end of 2023)</p>
+<p>Complete (Go-Live Oct 2023)</p>
 </div>
 </div>
 </div>
@@ -54,10 +54,10 @@ Amalgamated Hardware Merchants (AHM) is a leading B2B supplier of hardware, buil
 
 There was no shortage of pain-points with the existing build that we needed to address, in particular:
 
-- Design was outdated and UX was a huge known issue. 
+- The design was heavily outdated and general UX was a known issue. 
 - Over time, B2B pricing requirements had grown to much more complex.
-- Users were finding the overall shopping experience to be time consuming and arduous (in particular for repeat orders) leading to decreasing conversion rates.
-- Due to a huge product library, searching and filtering products had become very difficult.
+- Users were finding the overall shopping experience to be time consuming and arduous (in particular for repeat orders) leading to a downward trend on conversion rates.
+- Due to a large and rapidly expanding product library, searching and filtering products had become very difficult.
 
 <a href="#long-description">Stack, approach & more</a>
 </div>
@@ -102,7 +102,11 @@ There was no shortage of pain-points with the existing build that we needed to a
 </div>
 <div class="project__long__description__content">
 
-From early on in the design phase, it was clear that although the front-end would be clean and modular, that there would be various complex UI elements - many of which would have similar variations across the site. We also needed tooling that would allow us to integrate with various API’s in a performant and effective way. Utilising the Shopify storefront API was tempting however in this case, I decided that a hybrid approach of Liquid and Vue composition API would be the ideal combination as most of the more complicated requirements were based on the AHM’s custom data set-up. Our existing base theme repo had become a little outdated, in particular from a performance perspective. After much research, I decided to leverage from a [Vite based repo] (https://github.com/barrel/shopify-vite/tree/main/packages/vite-plugin-shopify) originally created by the [Barrel agency] (https://www.barrelny.com/shopify-plus-ecommerce-agency). The base theme was then customised for our needs including Vue 3 support for multiple mounting points, enabling us to to only load the specific component(s) needed for a particular page. Additionally, I decided to integrate Pinia for global store management. 
+From early on in the design phase, it was clear that although the front-end would be clean and modular, that there would be various complex UI elements - many of which would have similar variations across the site. We also needed tooling that would allow us to integrate with various API’s in a performant and effective way. 
+
+Utilising the Shopify Storefront API was tempting however in this case, I decided that a hybrid approach of Liquid and Vue composition API would be the ideal combination as most of the more complicated requirements were based on the AHM’s custom data set-up (as opposed to extracting Shopify data). Our existing base theme repo had become a little outdated, in particular from a performance perspective. After much research, I decided to leverage from a [Vite based repo](https://github.com/barrel/shopify-vite/tree/main/packages/vite-plugin-shopify) originally created by the [Barrel agency](https://www.barrelny.com/shopify-plus-ecommerce-agency). 
+
+The base theme was then customised for our needs including Vue 3 support for multiple mounting points, enabling us to target the specific component(s) needed for a particular page. Additionally, I decided to integrate Pinia for global store management. 
 
 </div>
 </div>

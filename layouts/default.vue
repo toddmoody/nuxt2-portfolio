@@ -12,8 +12,11 @@
         </div>
         <div class="nav__menu__wrapper">
           <ol>
+            <!-- <li>
+              <a class="font--plex" href="/#intro" aria-label="home">About</a>
+            </li> -->
             <li>
-              <a class="font--plex" href="/#about" aria-label="home">About</a>
+              <a class="font--plex" href="/#tech-stack" aria-label="home">Tech Stack</a>
             </li>
             <li>
               <a class="font--plex" href="/#projects" aria-label="projects"
